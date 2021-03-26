@@ -31,8 +31,8 @@ public class CreateAssignment {
             Style.addLines(1);
             Style.addUnderline();
             System.out.println(Style.yellow("DO YOU WANT TO CREATE ANOTHER ONE ASSIGNMENT?"));//asks the user, if he want to create another assignment.
-            System.out.println("1 - YES");
-            System.out.println("2 - NO");
+            System.out.println(Style.green("1 - YES"));
+            System.out.println(Style.red("2 - NO"));
             Style.addUnderline();
             boolean more = Input.giveYesOrNo();
             

@@ -35,8 +35,8 @@ public class EditTrainer {
                 Style.addLines(1);
                 Style.addUnderline();
                 System.out.println(Style.yellow("DO YOU WANT TO EDIT ANOTHER TRAINER?"));//asks the user, if he wants to edit another TRAINER.
-                System.out.println(Style.yellow("1")+" - YES");
-                System.out.println(Style.yellow("2")+" - NO");
+                System.out.println(Style.green("1 - YES"));
+                System.out.println(Style.red("2 - NO"));
                 Style.addUnderline();
                 boolean more = Input.giveYesOrNo();
 

@@ -42,16 +42,16 @@ public class ChooseObjectFromList< T > {
                 savedObjects.remove(choose-1);                                  //and removes the selected object from the option list
                 Style.addUnderline();
                 System.out.println(Style.yellow("DO YOU WANT TO CHOOSE MORE?"));              //after tha it asks the user if he want to choose another one object
-                System.out.println(Style.yellow("1")+" - YES");
-                System.out.println(Style.yellow("2")+" - NO");
+                System.out.println(Style.green("1 - YES"));
+                System.out.println(Style.red("2 - NO"));
                 Style.addUnderline();
                 Style.addLines(1);
                 moreObjects = Input.giveYesOrNo();}
             else if(savedObjects.size() == 1){                                  //if only one object left, method asks the user
                 System.out.println(Style.yellow("ONLY  ")+savedObjects.get(0) + Style.yellow("  LEFT."));   //if he want to add the object to his option list
                 System.out.println(Style.yellow("DO YOU WANT TO CHOOSE IT?"));
-                System.out.println(Style.yellow("1")+" - YES");
-                System.out.println(Style.yellow("2")+" - NO");
+                System.out.println(Style.green("1 - YES"));
+                System.out.println(Style.red("2 - NO"));
                 Style.addUnderline();
                 Style.addLines(1);
                 moreObjects = Input.giveYesOrNo();
