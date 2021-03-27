@@ -102,6 +102,7 @@ public class SearchInStudentsView {
             Style.addLines(1);
             System.out.println(Style.red("THERE ARE NO STUDENTS IN DATABASE!!!"));
             System.out.println(Style.red("PLEASE CREATE SOME AND TRY TO SEARCH LATER!!!"));
+            Input.pressToGoBack();
         }
     }
     
@@ -156,6 +157,7 @@ public class SearchInStudentsView {
             Style.addLines(1);
             System.out.println(Style.red("THERE ARE NO STUDENTS IN DATABASE!!!"));
             System.out.println(Style.red("PLEASE CREATE SOME AND TRY TO SEARCH LATER!!!"));
+            Input.pressToGoBack();
         }
     }
     
@@ -175,6 +177,7 @@ public class SearchInStudentsView {
             Style.addLines(1);
             System.out.println(Style.red("THERE ARE NO STUDENTS IN DATABASE!!!"));
             System.out.println(Style.red("PLEASE CREATE SOME AND TRY TO SEARCH LATER!!!"));
+            Input.pressToGoBack();
         }
     }
     
@@ -219,29 +222,34 @@ public class SearchInStudentsView {
                                 else{
                                     System.out.println(Style.red("THERE ARE NO STUDENTS IN THAT COURSE!!!"));
                                     System.out.println(Style.red("PLEASE CREATE SOME AND TRY TO SEARCH LATER!!!"));
+                                    Input.pressToGoBack();
                                 }
                             }
                         }
                         else{
                             System.out.println(Style.red("THERE ARE NO COURSES IN THAT ASSIGNMENT!!!"));
                             System.out.println(Style.red("PLEASE CREATE SOME AND TRY TO SEARCH LATER!!!"));
+                            
                         }
                     }
                     Input.pressToGoBack();
                 }
                 else{
                     System.out.println(Style.red("THERE ARE NO ASSIGNMENTS IN THAT WEEK!!!"));
+                    Input.pressToGoBack();
                 }
             }else{
                  Style.addLines(1);
                 System.out.println(Style.red("THERE ARE NO ASSIGNMENTS IN DATABASE!!!"));
-                System.out.println(Style.red("PLEASE CREATE SOME AND TRY TO SEARCH LATER!!!"));       
+                System.out.println(Style.red("PLEASE CREATE SOME AND TRY TO SEARCH LATER!!!")); 
+                Input.pressToGoBack();
             }
         }
         else{
             Style.addLines(1);
             System.out.println(Style.red("THERE ARE NO STUDENTS IN DATABASE!!!"));
             System.out.println(Style.red("PLEASE CREATE SOME AND TRY TO SEARCH LATER!!!"));
+            Input.pressToGoBack();
         }    
     }
 }

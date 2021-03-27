@@ -52,6 +52,7 @@ public class EditTrainer {
         }
         else{
             System.out.println(Style.red("THERE ARE NO TRAINERS TO EDIT. PLEASE ADD TRAINERS FIRST IN DATABASE!!!"));
+            Input.pressToGoBack();
         }
     }
     

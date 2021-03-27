@@ -53,6 +53,7 @@ public class EditCourse {
         }
         else{
             System.out.println(Style.red("THERE ARE NO COURSES TO EDIT. PLEASE ADD COURSES FIRST IN DATABASE!!!"));
+            Input.pressToGoBack();
         }
     }
     
@@ -337,6 +338,7 @@ public class EditCourse {
                 }
                 else{                                                           //If there are no more students then stops the while.
                     System.out.println(Style.red("THERE ARE NO OTHER STUDENTS IN DATABASE THAT YOU CAN ADD IN THE COURSE."));
+                    Input.pressToGoBack();
                     keepAsk=false;
                 }
 
@@ -345,6 +347,7 @@ public class EditCourse {
         else{
             Style.addLines(1);
             System.out.println(Style.red("THERE ARE NO OTHER STUDENTS IN DATABASE THAT YOU CAN ADD IN THE COURSE."));
+            Input.pressToGoBack();
         }
     }
     
@@ -445,6 +448,7 @@ public class EditCourse {
                 }
                 else{                                                           //If there are no more trainers then stops the while.
                     System.out.println(Style.red("THERE ARE NO OTHER TRAINERS IN DATABASE THAT YOU CAN ADD IN THE COURSE."));
+                    Input.pressToGoBack();
                     keepAsk=false;
                 }
 
@@ -453,6 +457,7 @@ public class EditCourse {
         else{
             Style.addLines(1);
             System.out.println(Style.red("THERE ARE NO OTHER TRAINERS IN DATABASE THAT YOU CAN ADD IN THE COURSE."));
+            Input.pressToGoBack();
         }
     }
     

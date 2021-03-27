@@ -53,6 +53,7 @@ public class EditStudent {
         }
         else{
             System.out.println(Style.red("THERE ARE NO STUDENTS TO EDIT. PLEASE ADD STUDENTS FIRST IN DATABASE!!!"));
+            Input.pressToGoBack();
         }
     }
     
@@ -194,6 +195,7 @@ public class EditStudent {
         }
         else{
             System.out.println(Style.red("THE STUDENT IS NOT IN ANY COURSE. HE HAS TO REGISTER TO A COURSE FIRST!!!"));
+            Input.pressToGoBack();
         }
     }
     
@@ -250,6 +252,7 @@ public class EditStudent {
         }
         else{
             System.out.println(Style.red("THE STUDENT IS NOT IN ANY COURSE. HE HAS TO REGISTER TO A COURSE FIRST!!!"));
+            Input.pressToGoBack();
         }
     }
     

@@ -91,6 +91,7 @@ public class SearchInAssignmentsView {
             Style.addLines(1);
             System.out.println(Style.red("THERE ARE NO ASSIGNMENTS IN DATABASE!!!"));
             System.out.println(Style.red("PLEASE CREATE SOME AND TRY TO SEARCH LATER!!!"));
+            Input.pressToGoBack();
         }
     }
     
@@ -128,6 +129,7 @@ public class SearchInAssignmentsView {
             Style.addLines(1);
             System.out.println(Style.red("THERE ARE NO ASSIGNMENTS IN DATABASE!!!"));
             System.out.println(Style.red("PLEASE CREATE SOME AND TRY TO SEARCH LATER!!!"));
+            Input.pressToGoBack();
         }  
     }
     

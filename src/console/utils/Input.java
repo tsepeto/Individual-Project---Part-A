@@ -115,6 +115,26 @@ public class Input {
     }
     
     
+    /**
+     * We call giveLaterDateThan() method to take an input from user that is a date.
+     * But first we check if the date that is given by the user is after the date
+     * that is given in the method.
+     * @return DateTime object
+     */
+    public static LocalDate giveLaterDateThan(LocalDate date){
+        LocalDate givenDate = LocalDate.of(1989,9,19);
+        boolean isNotValid = true;
+        while(isNotValid){
+            givenDate = giveADate();
+            if(givenDate.isAfter(date)){
+                isNotValid = false;
+            }
+            else{
+                System.out.println(Style.red("PLEASE GIVE A DATE, SOME DAYS AFTER THE STARTING DATE!!!"));
+            }
+        }
+        return givenDate;
+    }
     
     
     

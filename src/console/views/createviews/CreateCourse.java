@@ -69,11 +69,11 @@ public class CreateCourse {
             System.out.println(Style.yellow("GIVE THE COURSE'S STREAM:"));
             stream = Input.input.next();
             System.out.println(Style.yellow("GIVE THE COURSE'S TYPE:"));
-            type = Input.input.next(); //TODO giveDate
+            type = Input.input.next(); 
             System.out.println(Style.yellow("GIVE THE COURSE'S STARTING DATE:"));
-            start_date = Input.giveADate(); //TODO giveDate
+            start_date = Input.giveADate(); 
             System.out.println(Style.yellow("GIVE THE COURSE'S ENDING DATE:"));
-            end_date = Input.giveADate(); //TODO giveDate
+            end_date = Input.giveLaterDateThan(start_date); 
             Style.addLines(2);
             System.out.println(Style.yellow("CHOOSE STUDENTS:"));
             Style.addUnderline();
@@ -81,6 +81,7 @@ public class CreateCourse {
             if(studentList.size() == 0){
                 System.out.println(Style.red("THERE ARE NO STUDENTS TO ADD YET!!! "));
                 System.out.println(Style.red("YOU CAN ADD STUDENTS TO THIS COURSE FROM EDITING MENU!!!"));
+                Input.pressToGoBack();
                 Style.addLines(1);
             }
             System.out.println(Style.yellow("CHOOSE TRAINERS:"));
@@ -90,6 +91,7 @@ public class CreateCourse {
             if(trainerList.size() == 0){
                 System.out.println(Style.red("THERE ARE NO TRAINERS TO ADD YET!!! "));
                 System.out.println(Style.red("YOU CAN ADD STUDENTS TO THIS COURSE FROM EDITING MENU!!!"));
+                Input.pressToGoBack();
             }
             
             

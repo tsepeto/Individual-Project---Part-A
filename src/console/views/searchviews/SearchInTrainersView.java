@@ -90,6 +90,7 @@ public class SearchInTrainersView {
         else{
             System.out.println(Style.red("THERE ARE NO TRAINERS IN DATABASE!!!"));
             System.out.println(Style.red("PLEASE CREATE SOME AND TRY TO SEARCH LATER!!!"));
+            Input.pressToGoBack();
         }
     }
     
@@ -123,6 +124,7 @@ public class SearchInTrainersView {
         else{
             System.out.println(Style.red("THERE ARE NO TRAINERS IN DATABASE!!!"));
             System.out.println(Style.red("PLEASE CREATE SOME AND TRY TO SEARCH LATER!!!"));
+            Input.pressToGoBack();
         }    
     }
 }

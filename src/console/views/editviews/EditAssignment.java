@@ -54,6 +54,7 @@ public class EditAssignment {
         }
         else{
             System.out.println(Style.red("THERE ARE NO ASSIGNMENTS TO EDIT. PLEASE ADD ASSIGNMENTS FIRST IN DATABASE!!!"));
+            Input.pressToGoBack();
             
         }
     }

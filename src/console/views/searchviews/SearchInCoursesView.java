@@ -106,6 +106,7 @@ public class SearchInCoursesView {
         else{
             System.out.println(Style.red("THERE ARE NO TRAINERS IN DATABASE!!!"));
             System.out.println(Style.red("PLEASE CREATE SOME AND TRY TO SEARCH LATER!!!"));
+            Input.pressToGoBack();
         }
     }
     
@@ -134,6 +135,7 @@ public class SearchInCoursesView {
         else{
             System.out.println(Style.red("THERE ARE NO TRAINERS IN DATABASE!!!"));
             System.out.println(Style.red("PLEASE CREATE SOME AND TRY TO SEARCH LATER!!!"));
+            Input.pressToGoBack();
         }
     }
     
@@ -159,6 +161,7 @@ public class SearchInCoursesView {
             }
         else{
             System.out.println(Style.red("THERE ARE NO COURSES!!! PLEASE ADD COURSE FIRST!!!)"));
+            Input.pressToGoBack();
         }
     }
     
@@ -184,6 +187,7 @@ public class SearchInCoursesView {
         else{
             System.out.println(Style.red("THERE ARE NO TRAINERS IN DATABASE!!!"));
             System.out.println(Style.red("PLEASE CREATE SOME AND TRY TO SEARCH LATER!!!"));
+            Input.pressToGoBack();
         }
     }
     
@@ -200,11 +204,17 @@ public class SearchInCoursesView {
             int counter = 1;
             System.out.println(Style.yellow("ASSIGNMENTS IN CURSE :") + assignments.size());
             Style.addUnderline();
-            for(Assignment assignment:assignments){                             //Prints the assignments
-                System.out.println(Style.yellow(counter + " - ")+ assignment);
-                counter++;
+            if(assignments.size()>0){
+                for(Assignment assignment:assignments){                             //Prints the assignments
+                    System.out.println(Style.yellow(counter + " - ")+ assignment);
+                    counter++;
+                }
+            }
+            else{
+                System.out.println(Style.red("THIS COURSE HAS NO ASSIGNMENTS!!!"));
             }
             Style.addUnderline();
+            
             Style.addLines(1);
 
             Input.pressToGoBack();
@@ -212,6 +222,7 @@ public class SearchInCoursesView {
         else{
             System.out.println(Style.red("THERE ARE NO TRAINERS IN DATABASE!!!"));
             System.out.println(Style.red("PLEASE CREATE SOME AND TRY TO SEARCH LATER!!!"));
+            Input.pressToGoBack();
         }
     }
 }
