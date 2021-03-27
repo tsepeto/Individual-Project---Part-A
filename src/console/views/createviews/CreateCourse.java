@@ -65,11 +65,11 @@ public class CreateCourse {
         
         while(courseSaved == false){
             System.out.println(Style.yellow("GIVE THE COURSE'S TITLE:"));
-            title = Input.input.next();
+            title = Input.input.nextLine();
             System.out.println(Style.yellow("GIVE THE COURSE'S STREAM:"));
-            stream = Input.input.next();
+            stream = Input.input.nextLine();
             System.out.println(Style.yellow("GIVE THE COURSE'S TYPE:"));
-            type = Input.input.next(); 
+            type = Input.input.nextLine(); 
             System.out.println(Style.yellow("GIVE THE COURSE'S STARTING DATE:"));
             start_date = Input.giveADate(); 
             System.out.println(Style.yellow("GIVE THE COURSE'S ENDING DATE:"));

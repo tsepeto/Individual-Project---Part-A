@@ -150,9 +150,14 @@ public class SearchInCoursesView {
             int counter = 1;
             System.out.println(Style.yellow("STUDENTS IN CΟURSE: ") + students.size());
             Style.addUnderline();
-            for(Student student:students){                                      //Prints the students
-                System.out.println(Style.yellow(counter + " - ")+ student);
-                counter ++;
+            if(students.size()>0){
+                for(Student student:students){                                      //Prints the students
+                    System.out.println(Style.yellow(counter + " - ")+ student);
+                    counter ++;
+                }
+            }
+            else{
+                System.out.println(Style.red("THERE ARE NO STUDENTS IN THAT COURSE.PLEASE ADD SOME FROM EDITING MENU!!!"));
             }
             Style.addUnderline();
             Style.addLines(1);
@@ -176,8 +181,13 @@ public class SearchInCoursesView {
             int counter = 1;
             System.out.println(Style.yellow("TRAINERS IN CURSE :") + trainers.size());
             Style.addUnderline();
-            for(Trainer trainer:trainers){
-                System.out.println(Style.yellow(counter + " - ")+ trainer);     //Prints the students
+            if(trainers.size()>0){
+                for(Trainer trainer:trainers){
+                    System.out.println(Style.yellow(counter + " - ")+ trainer);     //Prints the students
+                }
+            }
+            else{
+                System.out.println(Style.red("THERE ARE NO TRAINERS IN THA COURSE.PLEASE ADD SOME FROM EDITING MENU!!!"));
             }
             Style.addUnderline();
             Style.addLines(1);
@@ -211,7 +221,7 @@ public class SearchInCoursesView {
                 }
             }
             else{
-                System.out.println(Style.red("THIS COURSE HAS NO ASSIGNMENTS!!!"));
+                System.out.println(Style.red("THERE ARE NO ASSIGNMENTS IN THAT COURSE.PLEASE ADD SOME FROM EDITING MENU!!!"));
             }
             Style.addUnderline();
             

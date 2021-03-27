@@ -150,7 +150,7 @@ public class Input {
         boolean isValid = false;
         while ( isValid == false  ){
             string = input.nextLine();
-            if( Pattern.matches("^[ A-Za-z]+$", string) == true ){                 //checks if the input contains only letters
+            if( Pattern.matches("^[ A-Za-z]+$", string) == true ){              //checks if the input contains only letters
                 isValid = true;}
             else{
                 System.out.println(Style.red("PLEASE GIVE THE RIGHT TEXT (NO NUMBERS, ONLY ENGLISH)"));}

@@ -197,7 +197,7 @@ public class EditTrainer {
         Style.addUnderline();
         Style.addLines(1);
         System.out.println(Style.yellow("WRITE THE NEW LAST NAME: "));
-        newSubject =Input.giveOnlyString();                                     //User gives the new subject
+        newSubject =Input.input.nextLine();                                     //User gives the new subject
         confirmedChanges = OtherViews.confirmChanges();                         //User confirms that wants to change the subject
         Style.addLines(2);
         

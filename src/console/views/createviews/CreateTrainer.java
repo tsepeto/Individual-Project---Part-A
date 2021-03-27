@@ -61,7 +61,7 @@ public class CreateTrainer {
             System.out.println(Style.yellow("GIVE THE STUDENT'S LAST NAME:"));
             lastName = Input.giveOnlyString();
             System.out.println(Style.yellow("GIVE THE TRAINERS'S SUBJECT:"));
-            subject = Input.input.next(); 
+            subject = Input.input.nextLine(); 
             
             
             trainer = new Trainer(firstName,lastName,subject);                  // Creates a temporary trainer.

@@ -46,7 +46,7 @@ public class TestDataCreator {
     Student eleniX =        new Student("Eleni","Xatzi",LocalDate.of(1999,03,03),2500);
     Student grigorisS =     new Student("Grigoris","Simaioforidis",LocalDate.of(1985,01,27),2000);
     Student christosB =     new Student("Christos","Bochoris",LocalDate.of(1983,07,21),2500);
-    Student christosKod =   new Student("Christos","Kodozis",LocalDate.of(1987,3,05),2250);
+    Student christosKod =   new Student("Christos","Kontosis",LocalDate.of(1987,3,05),2250);
     Student mariaL =        new Student("Maria","Likoudi",LocalDate.of(1991,07,21),2500);
     Student dimitraT =      new Student("Dimitra","Tsepetzidou",LocalDate.of(1983,06,18),2250);
     Student eiriniAd =      new Student("Eirini","Adamopoulou",LocalDate.of(2006,12,24),2250);

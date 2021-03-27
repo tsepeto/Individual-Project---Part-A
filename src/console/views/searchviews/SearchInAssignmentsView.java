@@ -65,7 +65,7 @@ public class SearchInAssignmentsView {
         Style.addUnderline();
         int counter = 1;
         
-        System.out.println(Style.yellow(Style.createFormat(new int[]{3,3,40,47,15},new String[]{"","","TITLE", "DESCRIPTION", "SUBDATE"})));
+        System.out.println(Style.yellow(Style.createFormat(new int[]{3,3,40,47,15},new String[]{"","","TITLE", "DESCRIPTION", "DEADLINE"})));
         for(Assignment assignment:assignments){
             Style.printFormatted( new int[]{6,40,50,15},
                     new String[]{Style.yellow(counter+ "-"),assignment.getTitle(),assignment.getDescription(),

@@ -62,9 +62,9 @@ public class CreateAssignment {
         
         while(assignmentSaved == false){
             System.out.println(Style.yellow("PLEASE GIVE THE ASSIGNMENT'S TITLE:"));
-            title = Input.input.next();
+            title = Input.input.nextLine();
             System.out.println(Style.yellow("PLEASE GIVE THE ASSIGNMENT'S DESCRITION:"));
-            description = Input.input.next();
+            description = Input.input.nextLine();
             System.out.println(Style.yellow("PLEASE GIVE THE ASSIGNMENT'S DEADLINE:"));
             subDateTime = Input.giveADate(); //TODO giveDate
             System.out.println(Style.yellow("PLEASE GIVE THE ASSIGNMENT'S ORAL MARK:"));

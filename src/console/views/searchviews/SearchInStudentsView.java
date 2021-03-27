@@ -169,7 +169,12 @@ public class SearchInStudentsView {
     private static void showStudentsEnrollMoteThan2(){   
         if(data.getStudents().size()>0){
             ArrayList<Student> students = data.getStudentsWhenLessonsMoreThan(1); //finds all the students who have enrolled in more tha, 2 courses
-            printStudents(students);
+            if(students.size()>0){
+                printStudents(students);
+            }
+            else{
+                System.out.println(Style.red("THERE ARE NO STUDENTS WHO ARE ENROLLED IN MORE THAN ONE COURSE!!!"));
+            }
             Style.addLines(1);
             Input.pressToGoBack();
         }

@@ -160,7 +160,7 @@ public class EditCourse {
         Style.addUnderline();
         Style.addLines(1);
         System.out.println(Style.yellow("WRITE THE NEW TITLE: "));
-        newTitle =Input.input.next();                                           //User gives the new Title
+        newTitle =Input.input.nextLine();                                       //User gives the new Title
         confirmedChanges = OtherViews.confirmChanges();                         //User confirms that wants to change the Title
         Style.addLines(2);
         
@@ -190,7 +190,7 @@ public class EditCourse {
         Style.addUnderline();
         Style.addLines(1);
         System.out.println(Style.yellow("WRITE THE NEW STREAM: "));
-        newStream =Input.input.next();                                          //User gives the new Stream
+        newStream =Input.input.nextLine();                                      //User gives the new Stream
         confirmedChanges = OtherViews.confirmChanges();                         //User confirms that wants to change the Stream
         Style.addLines(2);
         
@@ -221,7 +221,7 @@ public class EditCourse {
         Style.addUnderline();
         Style.addLines(1);
         System.out.println(Style.yellow("WRITE THE NEW TYPE: "));
-        newType =Input.input.next();                                            //User gives the new Type
+        newType =Input.input.nextLine();                                        //User gives the new Type
         confirmedChanges = OtherViews.confirmChanges();                         //User confirms that wants to change the Type
         Style.addLines(2);
         
@@ -280,7 +280,7 @@ public class EditCourse {
         Style.addUnderline();
         Style.addLines(1);
         System.out.println(Style.yellow("WRITE THE NEW END DATE: "));
-        newEndDate =Input.giveADate();                                          //User gives the new End Date
+        newEndDate =Input.giveLaterDateThan(course.getStart_date());            //User gives the new End Date
         confirmedChanges = OtherViews.confirmChanges();                         //User confirms that wants to change the End Date
         Style.addLines(2);
         
@@ -510,6 +510,7 @@ public class EditCourse {
             else{
                 Style.addLines(1);
                 System.out.println(Style.red("THE COURSE HAS NO OTHER TRAINER TO REMOVE")); //If course's trainer list is empty then breaks the wile loop.
+                Input.pressToGoBack();
                 keepAsk=false;
             }
         }

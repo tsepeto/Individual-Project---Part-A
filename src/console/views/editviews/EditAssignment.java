@@ -153,7 +153,7 @@ public class EditAssignment {
         Style.addUnderline();
         Style.addLines(1);
         System.out.println(Style.yellow("WRITE THE NEW TITLE: "));
-        newTitle =Input.input.next();                                           //User gives the new Title
+        newTitle =Input.input.nextLine();                                       //User gives the new Title
         confirmedChanges = OtherViews.confirmChanges();                         //User confirms that wants to change the Title
         Style.addLines(2);
         
@@ -182,7 +182,7 @@ public class EditAssignment {
         Style.addUnderline();
         Style.addLines(1);
         System.out.println(Style.yellow("WRITE THE NEW DESCRIPTION: "));
-        newDescription =Input.input.next();                                     //User gives the new Description
+        newDescription =Input.input.nextLine();                                 //User gives the new Description
         confirmedChanges = OtherViews.confirmChanges();                         //User confirms that wants to change the description
         Style.addLines(2);
         
