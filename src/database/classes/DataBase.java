@@ -1,6 +1,7 @@
 
 package database.classes;
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.temporal.TemporalField;
 import java.time.temporal.WeekFields;
@@ -314,8 +315,10 @@ public class DataBase {
     
     
     /**
-     * Takes a date and returns all the assighments who their deadline is over 
+     * Takes a date and returns all the assignments who their deadline is over 
      * the same week as the given date's week.
+     * We want to calculate the week from Monday to Sunday, not from Sunday to 
+     * Saturday, as Default.
      * @param localDate
      * @return ArrayList with Assignments
      */
@@ -323,6 +326,9 @@ public class DataBase {
         ArrayList<Assignment> result = new ArrayList();
         TemporalField woy = WeekFields.of(Locale.getDefault()).weekOfWeekBasedYear(); 
         int dateWeekNumber = localDate.get(woy);
+        if(localDate.getDayOfWeek()== DayOfWeek.SUNDAY){                        //If the date is queal to SUNDAY
+            dateWeekNumber -=1;                                                 //We minus the week by one. That's how we tell that the Sunday is in the previous week!!!
+        } 
         for (Assignment assignment : this.getAssignments()){
             if(assignment.getWeekOfYearDeadlint() == dateWeekNumber){
                 result.add(assignment);
