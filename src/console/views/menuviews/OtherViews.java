@@ -65,6 +65,8 @@ public class OtherViews {
         System.out.println(Style.blue("|___/\\____/\\___/  \\___/\\_____/"));
         System.out.println(Style.blue("                              "));
         System.out.println(Style.blue("                              "));
+        Style.addLines(1);
+        System.out.println(Style.blue("All Rights Reserved To : ")+Style.yellow("© Nikolaos Tsepetzidis"));
         System.exit(0);
     }
     
@@ -89,6 +91,8 @@ public class OtherViews {
         System.out.println(Style.blue("      _")+Style.yellow("\\////////\\\\\\")+Style.blue("__")+Style.yellow("\\///\\\\\\")+Style.blue("___________")+Style.yellow("\\///\\\\\\")+Style.blue("__")+Style.yellow("/\\\\\\")+Style.blue("_____")+Style.yellow("\\///\\\\\\")+Style.blue("__")+Style.yellow("/\\\\\\")+Style.blue("____")+Style.yellow("\\/\\\\\\")+Style.blue("_____________  "));
         System.out.println(Style.blue("       __")+Style.yellow("/\\\\\\\\\\\\\\\\\\\\")+Style.blue("____")+Style.yellow("\\////\\\\\\\\\\\\\\\\\\")+Style.blue("____")+Style.yellow("\\///\\\\\\\\\\/")+Style.blue("________")+Style.yellow("\\///\\\\\\\\\\/")+Style.blue("_____")+Style.yellow("\\/\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")+Style.blue("_ "));
         System.out.println(Style.blue("        _")+Style.yellow("\\//////////")+Style.blue("________")+Style.yellow("\\/////////")+Style.blue("_______")+Style.yellow("\\/////")+Style.blue("____________")+Style.yellow("\\/////")+Style.blue("_______")+Style.yellow("\\///////////////")+Style.blue("__"));
+        Style.addLines(1);
+        System.out.println(Style.blue("All Rights Reserved To : ")+Style.yellow("© Nikolaos Tsepetzidis"));
         System.exit(0);
     }
     
