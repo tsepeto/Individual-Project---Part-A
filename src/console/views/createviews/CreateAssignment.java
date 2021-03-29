@@ -67,7 +67,7 @@ public class CreateAssignment {
             System.out.println(Style.yellow("PLEASE GIVE THE ASSIGNMENT'S DESCRITION:"));
             description = Input.input.nextLine();
             System.out.println(Style.yellow("PLEASE GIVE THE ASSIGNMENT'S DEADLINE:"));
-            subDateTime = Input.giveADate(); 
+            subDateTime = Input.giveSubDate(); 
             System.out.println(Style.yellow("PLEASE GIVE THE ASSIGNMENT'S ORAL MARK:"));
             oralMark = Input.giveOnlyInteger(); 
             System.out.println(Style.yellow("PLEASE GIVE THE ASSIGNMENT'S TOTAL MARK:"));

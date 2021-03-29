@@ -4,6 +4,7 @@ package console.utils;
 
 import static console.utils.Style.addLines;
 import database.classes.DataBase;
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
@@ -153,6 +154,28 @@ public class Input {
             }
             else{
                 System.out.println(Style.red("PLEASE GIVE A DATE THAT IS BEFORE THAN ")+date.format(DateTimeFormatter.ofPattern(data.daTiFormat)) +Style.red(" !!!"));
+            }
+        }
+        return givenDate;
+    }
+    
+    /**
+     * Takes a LocalDate from a user, and checks if the day of the week is from Monday to Friday. If the day is
+     * Saturday or Sunday the program asks the user to give another LocalDate! 
+     * @return LocalDate from Monday to Friday
+     */
+    public static LocalDate giveSubDate(){
+        LocalDate givenDate = LocalDate.of(1989,9,19);
+        boolean isNotValid = true;
+        while(isNotValid){
+            givenDate = giveADate();
+            if(givenDate.getDayOfWeek()== DayOfWeek.SATURDAY || givenDate.getDayOfWeek() == DayOfWeek.SUNDAY){
+                
+                System.out.println(Style.red("PLEASE GIVE A DATE THAT IS BETWEEN MONDAY AND FRIDAY!!!"));
+                
+            }
+            else{
+                isNotValid = false;
             }
         }
         return givenDate;
