@@ -101,7 +101,7 @@ public class Input {
         boolean isNotValid = true;
         while(isNotValid){
             try{
-                System.out.println("Please give a date (like 12/11/2000)");
+                System.out.println("Please give a date (like 15/03/2000)");
                 Scanner input = new Scanner(System.in);
                 String in = input.nextLine();
                 result = LocalDate.parse(in, format);
@@ -116,7 +116,7 @@ public class Input {
     
     
     /**
-     * We call giveLaterDateThan() method to take an input from user that is a date.
+     * We call giveLaterDateThan method to take an input from user that is a date.
      * But first we check if the date that is given by the user is after the date
      * that is given in the method.
      * @return DateTime object
@@ -130,12 +130,33 @@ public class Input {
                 isNotValid = false;
             }
             else{
-                System.out.println(Style.red("PLEASE GIVE A DATE, SOME DAYS AFTER THE STARTING DATE!!!"));
+                System.out.println(Style.red("PLEASE GIVE A DATETHAT IS AFTER THAN ")+ date.format(DateTimeFormatter.ofPattern(data.daTiFormat)) +Style.red(" !!!"));
             }
         }
         return givenDate;
     }
     
+    
+    /**
+     * We call giveEarlierDateThan method to take an input from user that is a date.
+     * But first we check if the date that is given by the user is before the date
+     * that is given in the method.
+     * @return DateTime object
+     */
+    public static LocalDate giveEarlierDateThan(LocalDate date){
+        LocalDate givenDate = LocalDate.of(1989,9,19);
+        boolean isNotValid = true;
+        while(isNotValid){
+            givenDate = giveADate();
+            if(givenDate.isBefore(date)){
+                isNotValid = false;
+            }
+            else{
+                System.out.println(Style.red("PLEASE GIVE A DATE THAT IS BEFORE THAN ")+date.format(DateTimeFormatter.ofPattern(data.daTiFormat)) +Style.red(" !!!"));
+            }
+        }
+        return givenDate;
+    }
     
     
     
@@ -175,7 +196,6 @@ public class Input {
             catch(NumberFormatException e){
                 System.out.println(Style.red("PLEASE GIVE ONLY A NUMBER(INTEGER OR DECIMAL NUMBER)"));}
         }
-        System.out.println(result);
         return result;
     }
     

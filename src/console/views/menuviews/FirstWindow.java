@@ -25,7 +25,7 @@ public class FirstWindow {
     public static void showMenu(){
     
         System.out.println(Style.green("WELCOME TO sCOOL!!!"));
-        System.out.println(Style.green("sCOOL IS THE APPLICATION THAT WILL MAKE THE SCHOOL MANAGMENT, BE A FUN"));
+        System.out.println(Style.green("sCOOL IS THE APPLICATION THAT WILL MAKE THE SCHOOL MANAGEMENT, BE A FUN"));
         Style.addLines(1);
         userChoice();                                                           //calls the choice procedure.
         
@@ -44,7 +44,7 @@ public class FirstWindow {
         int correctInput;
         
         
-        System.out.println(Style.magenta("WOULD YOU LIKE TO RUN THE PROGRAM IN TESTING MOD WITH RANDOM DATA OR"));
+        System.out.println(Style.magenta("WOULD YOU LIKE TO RUN THE PROGRAM IN TESTING MODE WITH RANDOM DATA OR"));
         System.out.println(Style.magenta("WOULD YOU LIKE TO RUN THE PROGRAM ONLY WITH YOUR OWN DATA?"));
         Style.addUnderline();
         Style.addLines(1);

@@ -78,7 +78,7 @@ public class OtherViews {
      * The method thanks the user, prints the logo and closes the program.
      */
     public static void closeProgram(){
-        Style.addLines(2);
+        Style.addLines(1);
         System.out.println(Style.blue("THANK YOU FOR USING")+Style.yellow(" sCOOL"));
         System.out.println(Style.green("THE PROGRAM THAT FREES YOUR HANDS IN THE MANAGEMENT OF YOUR SCHOOL"));
         
@@ -93,6 +93,7 @@ public class OtherViews {
         System.out.println(Style.blue("        _")+Style.yellow("\\//////////")+Style.blue("________")+Style.yellow("\\/////////")+Style.blue("_______")+Style.yellow("\\/////")+Style.blue("____________")+Style.yellow("\\/////")+Style.blue("_______")+Style.yellow("\\///////////////")+Style.blue("__"));
         Style.addLines(1);
         System.out.println(Style.blue("All Rights Reserved To : ")+Style.yellow("© Nikolaos Tsepetzidis"));
+        Style.addLines(1);
         System.exit(0);
     }
     

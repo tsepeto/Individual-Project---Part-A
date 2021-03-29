@@ -97,8 +97,8 @@ public class CreateCourse {
             
             course = new Course(title,stream,type,start_date,end_date);         // Creates a temporary course.
             
-            if (!data.doesCourseExist(course)){                     // Checks if the course allready exists,
-                data.saveCourse(course,studentList,trainerList);    // if not saves it in the database.
+            if (!data.doesCourseExist(course)){                                 // Checks if the course allready exists,
+                data.saveCourse(course,studentList,trainerList);                // if not saves it in the database.
                 courseSaved = true;                                             // Here it stops the while loop.
             }
             else{

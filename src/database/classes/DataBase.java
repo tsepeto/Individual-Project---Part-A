@@ -67,12 +67,32 @@ public class DataBase {
     
     //A this.courses setter
     public void setCourses(ArrayList<Course> courses){
-        this.courses = courses;}
+        this.courses = courses;
+    }
     
     
     //A this.courses.getter
     public ArrayList<Course> getCourses(){
-        return this.courses;}
+        return this.courses;
+    }
+    
+    /**
+     * Get all courses that are active in given date
+     * @param localDate
+     * @return ArrayList with courses
+     */
+    public ArrayList<Course> getCourses(LocalDate localDate){
+        ArrayList<Course> courses = new ArrayList(this.getCourses());           //Takes a copy from all Courses
+        Iterator<Course> iter = courses.iterator();
+         while(iter.hasNext()){                                                 
+             Course course = iter.next();
+             if(course.getStart_date().isAfter(localDate) || course.getEnd_date().isBefore(localDate)){ //If the course is not active in the given date
+                 iter.remove();                                                 //We remove that course from courses.
+             }
+         
+         }
+         return courses;                                                        //Returns only the active courses in the given date.
+    }
     
     
     /**
@@ -80,7 +100,8 @@ public class DataBase {
      * @param newCourse 
      */
     public void addCourse(Course newCourse){
-        this.courses.add(newCourse);}
+        this.courses.add(newCourse);
+    }
     
     
     /**

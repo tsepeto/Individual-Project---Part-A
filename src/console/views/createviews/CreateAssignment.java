@@ -6,6 +6,7 @@ import console.utils.Input;
 import console.views.menuviews.OtherViews;
 import database.classes.DataBase;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import object.classes.Assignment;
 import object.classes.Course;
@@ -66,17 +67,17 @@ public class CreateAssignment {
             System.out.println(Style.yellow("PLEASE GIVE THE ASSIGNMENT'S DESCRITION:"));
             description = Input.input.nextLine();
             System.out.println(Style.yellow("PLEASE GIVE THE ASSIGNMENT'S DEADLINE:"));
-            subDateTime = Input.giveADate(); //TODO giveDate
+            subDateTime = Input.giveADate(); 
             System.out.println(Style.yellow("PLEASE GIVE THE ASSIGNMENT'S ORAL MARK:"));
-            oralMark = Input.giveOnlyInteger(); //TODO giveDate
+            oralMark = Input.giveOnlyInteger(); 
             System.out.println(Style.yellow("PLEASE GIVE THE ASSIGNMENT'S TOTAL MARK:"));
-            totalMark = Input.giveOnlyInteger(); //TODO giveDate
+            totalMark = Input.giveOnlyInteger(); 
             Style.addLines(2);
-            System.out.println(Style.yellow("CHOOSE COURSES:"));
+            System.out.println(Style.yellow("CHOOSE COURSES THAT ARE ACTIVE AT: ")+subDateTime.format(DateTimeFormatter.ofPattern(data.daTiFormat)));
             Style.addUnderline();
-            ArrayList<Course> courseList = OtherViews.courseChoose.chooseMany(data.getCourses());         // Lets the user to choose some Courses
+            ArrayList<Course> courseList = OtherViews.courseChoose.chooseMany(data.getCourses(subDateTime)); // Lets the user to choose some Courses that are active in the given date
             if(courseList.size()==0){
-                System.out.println(Style.red("THERE ARE NO COURSES TO ADD YET!!! "));
+                System.out.println(Style.red("THERE ARE NO COURSES TO ADD YET IN ASSIGNMEN'S DATE!!! "));
                 System.out.println(Style.red("YOU CAN ADD COURSES TO THIS ASSIGNMENT LATER, FROM EDITING MENU!!!"));
             }
             assignment = new Assignment(title,description,subDateTime,oralMark,totalMark);  // Creates a temporary Assignment

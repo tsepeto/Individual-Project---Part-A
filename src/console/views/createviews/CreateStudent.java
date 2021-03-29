@@ -31,7 +31,7 @@ public class CreateStudent {
             studentCreator();                                                   //starts the student's create procedure.
             Style.addLines(1);
             Style.addUnderline();
-            System.out.println(Style.yellow("DO YOU WANT TO CREATE ANOTHER STUDENT?"));       //asks the user, if he want to create another student.
+            System.out.println(Style.yellow("DO YOU WANT TO CREATE ANOTHER STUDENT?")); //asks the user, if he want to create another student.
             System.out.println(Style.green("1 - YES"));
             System.out.println(Style.red("2 - NO"));
             Style.addUnderline();
@@ -67,7 +67,7 @@ public class CreateStudent {
             System.out.println(Style.yellow("GIVE THE STUDENT'S LAST NAME:"));
             lastName = Input.giveOnlyString();
             System.out.println(Style.yellow("GIVE THE STUDENT'S BIRTH DATE:"));
-            dateOfBirth = Input.giveADate(); //TODO giveDate
+            dateOfBirth = Input.giveEarlierDateThan(LocalDate.now().minusYears(15)); // Checks if the user is at least 15 years old.
             System.out.println(Style.yellow("GIVE THE STUDENT'S TUITION FEES:"));
             tuitionFees = Input.giveOnlyDouble();
             
