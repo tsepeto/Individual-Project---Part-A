@@ -345,11 +345,9 @@ public class DataBase {
      */
     public ArrayList<Assignment> AssignmentsMustDelivered(LocalDate localDate){
         ArrayList<Assignment> result = new ArrayList();
-        TemporalField woy = WeekFields.of(Locale.getDefault()).weekOfWeekBasedYear(); 
+        TemporalField woy = WeekFields.ISO.weekOfYear();
         int dateWeekNumber = localDate.get(woy);
-        if(localDate.getDayOfWeek()== DayOfWeek.SUNDAY){                        //If the date is queal to SUNDAY
-            dateWeekNumber -=1;                                                 //We minus the week by one. That's how we tell that the Sunday is in the previous week!!!
-        } 
+        
         for (Assignment assignment : this.getAssignments()){
             if(assignment.getWeekOfYearDeadlint() == dateWeekNumber){
                 result.add(assignment);

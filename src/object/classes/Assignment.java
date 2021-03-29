@@ -84,7 +84,7 @@ public class Assignment {
      * @return int
      */
     public int getWeekOfYearDeadlint(){
-        TemporalField woy = WeekFields.of(Locale.getDefault()).weekOfWeekBasedYear(); 
+        TemporalField woy = WeekFields.ISO.weekOfYear();
         int weekNumber = this.getSubDateTime().get(woy);
         return weekNumber;
     }
